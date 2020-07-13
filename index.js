@@ -4,24 +4,78 @@ console.log(fifaData);
 console.log('its working');
 // ⚽️ M  V P ⚽️ //
 
-/* Task 1: Investigate the data above. Practice accessing data by console.log-ing the following pieces of data 
+/* Task 1: Investigate the data above. Practice accessing data by console.log-ing the following pieces of data */
+    
+// (a) Home Team name for 2014 world cup final
+console.log("Task 1a: Answer:");
+    function HomeTeamName() {
+        for (let i = 0; i < fifaData.length; i++) {
+            if(fifaData[i].Year === 2014) {
+                console.log(`${fifaData[i].Year} - Home Team Name: ${fifaData[i]["Home Team Name"]}`);
+            }
+        }
+    }
+    HomeTeamName();
 
-(a) Home Team name for 2014 world cup final
-(b) Away Team name for 2014 world cup final
-(c) Home Team goals for 2014 world cup final
-(d) Away Team goals for 2014 world cup final
-(e) Winner of 2014 world cup final */
 
+// (b) Away Team name for 2014 world cup final
+console.log("Task 1b Answer:");
+    function AwayTeamName() {
+        for (let i = 0; i < fifaData.length; i++) {
+            if(fifaData[i].Year === 2014) {
+                console.log(`${fifaData[i].Year} - Away Team Name: ${fifaData[i]["Away Team Name"]}`);
+            }
+        }
+    }
+    AwayTeamName();
+
+// (c) Home Team goals for 2014 world cup final
+console.log("Task 1c Answer:");
+    function HomeTeamGoals() {
+        for (let i = 0; i < fifaData.length; i++) {
+            if(fifaData[i].Year === 2014) {
+                console.log(`${fifaData[i].Year} - Home Team Goals: ${fifaData[i]["Home Team Goals"]}`);
+            }
+        }
+    }
+    HomeTeamGoals();
+
+// (d) Away Team goals for 2014 world cup final
+console.log("Task 1d Answer:");
+    function AwayTeamGoals() {
+        for (let i = 0; i < fifaData.length; i++) {
+            if(fifaData[i].Year === 2014) {
+                console.log(`${fifaData[i].Year} - Away Team Goals: ${fifaData[i]["Away Team Goals"]}`);
+            }
+        }
+    }
+    AwayTeamGoals();
+
+
+// (e) Winner of 2014 world cup final 
+console.log("Task 1e Answer:");
+    function winnerOf2014() {
+        for (let i = 0; i < fifaData.length; i++) {
+            if(fifaData[i].Year === 2014 && fifaData[i].Stage === "Final" && fifaData[i]["Home Team Goals"] > fifaData[i]["Away Team Goals"]) {
+                console.log(`The Winner of ${fifaData[i].Year} is ${fifaData[i]["Home Team Name"]}`);
+            } else if (fifaData[i].Year === 2014 && fifaData[i].Stage === "Final" && fifaData[i]["Away Team Goals"] > fifaData[i]["Home Team Goals"]) {
+                console.log(`The Winner of ${fifaData[i].Year} is ${fifaData[i]["Away Team Name"]}`);
+
+            }
+        }
+    }
+    winnerOf2014();
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
+console.log("Task 2 Answer:");
+    function getFinals() {
 
-function getFinals(/* code here */) {
+    };
+    getFinals();
 
-    /* code here */
 
-};
-
-/* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
+/* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an 
+array called `years` containing all of the years in the dataset */
 
 function getYears(/* code here */) {
 
